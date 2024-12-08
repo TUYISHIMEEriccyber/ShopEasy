@@ -211,6 +211,10 @@
 
             // Confirmation message
             document.getElementById('tocart').innerHTML='Product Added to Cart';
+                // Clear the message after 4 seconds
+    setTimeout(function() {
+        document.getElementById('tocart').innerHTML = ""; // Clear the message
+    }, 4000); // 4000 milliseconds = 4 seconds
         }
     </script>
 </body>
