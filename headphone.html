@@ -170,6 +170,7 @@
                 </ul>
                 <p class="price">$39</p>
                 <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="tocart" style="color: red;"></p>
             </div>
         </div>
     </div>
@@ -208,7 +209,7 @@
             localStorage.setItem("cart", JSON.stringify(cart));
 
             // Confirmation message
-            alert("Product added to cart!");
+            document.getElementById('tocart').innerHTML='Product Added to Cart';
         }
     </script>
 </body>
