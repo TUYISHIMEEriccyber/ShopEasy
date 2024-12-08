@@ -78,6 +78,7 @@
         .product-details img {
             max-width: 100%;
             width: 400px;
+            height: 400px;
             border-radius: 10px;
             margin-right: 20px;
         }
@@ -170,6 +171,7 @@
                 </ul>
                 <p class="price">$29</p>
                 <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="tocart" style="color: blue;" onclick="setTimeout()"></p>
             </div>
         </div>
     </div>
@@ -207,7 +209,12 @@
             localStorage.setItem("cart", JSON.stringify(cart));
 
             // Confirmation message
-            alert("Product added to cart!");
+             // Confirmation message
+             document.getElementById('tocart').innerHTML="Product added to cart";
+                // Clear the message after 4 seconds
+        setTimeout(function() {
+            document.getElementById('tocart').innerHTML = ""; // Clear the message
+    }, 4000); // 4000 milliseconds = 4 seconds
         }
     </script>
 </body>

@@ -78,6 +78,7 @@
         .product-details img {
             max-width: 100%;
             width: 400px;
+            height: 450px;
             border-radius: 10px;
             margin-right: 20px;
         }
@@ -169,7 +170,7 @@
                     <li>15.6-inch Full HD Display</li>
                 </ul>
                 <p class="price">$99.5</p>
-                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <button class="add-to-cart" onclick="setTimeout()">Add to Cart</button>
                 <p id="tocart" style="color: blue;"></p>
             </div>
         </div>
@@ -211,8 +212,8 @@
             // Confirmation message
             document.getElementById('tocart').innerHTML="Product added to cart";
                 // Clear the message after 4 seconds
-    setTimeout(function() {
-        document.getElementById('tocart').innerHTML = ""; // Clear the message
+        setTimeout(function() {
+            document.getElementById('tocart').innerHTML = ""; // Clear the message
     }, 4000); // 4000 milliseconds = 4 seconds
         }
     </script>
